@@ -51,7 +51,7 @@ if(ID and Name):
                 face = cv2.resize(face_extractor(frame),(200,200))
                 face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
         
-                file_name_path = 'faces/'+str(ID)+'_'+str(count)+'_'+Name+'.jpg'
+                file_name_path = 'faces/'+str(ID)+'_'+str(count)+'.jpg'
                 cv2.imwrite(file_name_path,face)
         
                 cv2.putText(face,str(count),(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)

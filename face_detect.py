@@ -57,6 +57,7 @@ def face_detector(image, size = 0.5):
             face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
             value, result = model.predict(face)
             v=str(value)
+            print(v)
             temp_name = known_persons.loc[known_persons['Id'] == v, 'Name'].item()
          
             size = cv2.getTextSize(temp_name, cv2.FONT_HERSHEY_SIMPLEX, 0.55, 1)
